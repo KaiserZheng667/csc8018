@@ -341,13 +341,13 @@ background-image: url('https://ncl.instructure.com/courses/65807/files/9940102/d
 .header .title {
     position: absolute;
     left: 10px;   /* 距离左边 10px（可改为 0px 更贴边） */
-    top: 60px;    /* 距离顶部 10px（可改为 0px 更贴边） */
+    top: 50px;    /* 距离顶部 10px（可改为 0px 更贴边） */
     z-index: 2;
     transform: none; /* 不再需要垂直居中 */
   }
   /* 3. 主标题（<h1>）左对齐（确保无多余 padding / margin） */
  .header .title h1 {
-    font-size: 60px; /* 小屏幕标题字号缩小 */
+    font-size: 55px; /* 小屏幕标题字号缩小 */
     color: white;
     margin: 0;
     padding: 0;
@@ -396,4 +396,5 @@ padding-right: 30px;
     width: auto;
    
 }
+
 }
