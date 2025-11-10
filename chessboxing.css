@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Kanit:wght@700&display=swap');
+html{
+  --ratio: 1.4142356;
+--s-5: calc(var(--s-4) / var(--ratio));
+--s-4: calc(var(--s-3) / var(--ratio)); /* Larger title font size */
+--s-3: calc(var(--s-2) / var(--ratio)); /* Smaller title font size */
+--s-2: calc(var(--s-1) / var(--ratio));
+--s-1: calc(var(--s0) / var(--ratio));
+--s0: 1rem; /* table font size */
+--s1: calc(var(--s0) * var(--ratio));
+--s2: calc(var(--s1) * var(--ratio));
+--s3: calc(var(--s2) * var(--ratio));
+--s4: calc(var(--s3) * var(--ratio));
+--s5: calc(var(--s4) * var(--ratio));
+--page-margin: var(--s4);
+--vertical-space: var(--s2);
+--menu-space: var(--s0);
+--frame-color: #ccc;
+}
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: var(--s0);
+
+}
+
+.main {
+  max-width: 100ch;
+  margin: 0 auto;
+  padding-top: var(--vertical-space);
+  background-color: white;
+}
+
+.header {
+    position: relative;
+    width: auto;
+    height:280px;
+    margin: 0 auto;
+     padding: var(--page-margin);
+    background-color: #000000; 
+    background-image: url('https://github.com/cgshep/csc8018-coursework-resources/blob/master/assets/chessboxing_background.jpg?raw=true');
+    background-size: contain;
+    background-position: top center ;
+    background-repeat: no-repeat;
+  
+}
+
+.title {
+    position: absolute;
+    top: 50%;      
+    transform: translateY(-50%); 
+}
+.header .title h1 {
+    color: white;
+    font-size: var(--s4);
+   
+    font-family: Arial Black, Gadget, sans-serif;
+  font-weight: bold;
+} 
+
+.header nav {
+  position: absolute; 
+  display: flex;
+  bottom: 0px;
+  right: var(--page-margin);
+  margin: 0;
+  padding: 0;
+
+}
+
+.header nav ul {
+    display: flex;
+  list-style: none;
+    flex-direction: row; 
+    gap:var(--menu-space);
+    justify-content: right;
+    
+}
+.header nav ul li{
+  margin:var(--s0) ;
+}
+
+
+.header nav ul li a {
+ 
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: var(--s0); 
+    font-family: Arial Black, Gadget, sans-serif;
+  font-weight: bold;
+   
+    transition: color 0.3s ease;
+  }
+
+
+
+.header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: yellow;
+}
+
+.mainContent{
+
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
+    padding-top: var(--vertical-space);
+  
+}
+.chessboxing_ring{
+  width: 58%;             
+  float: right;
+  margin-left: 10px;          
+  padding: 15px; 
+  border: 3px solid var(--frame-color);
+  border-radius: 25px;
+  font-style: italic;
+  box-sizing: border-box;   
+  text-align: center;
+}
+.youtubeVideo{
+   width: 58%;
+  float: right;
+ 
+  margin-left: 10px;          
+  padding: 15px; 
+  border: 3px solid var(--frame-color);
+  border-radius: 25px;
+  font-style: italic;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.chessboxing_ring img {
+  width: 100%;
+height: auto;
+  display: block;
+  margin: 0 auto; 
+}
+.youtubeVideo iframe{
+    width: 100%;
+    height: auto;
+  display: block;
+  margin: 0 auto; 
+}
+
+#History{
+    font-weight: bold;
+    font-size: var(--s2);
+    padding: var(--vertical-space);
+   
+    
+}
+#History::before {
+  font-weight: normal;
+  content: "\2655";  
+  margin-right: 8px; 
+  font-size: 1.5em;
+  
+}
+.blockquote{
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+ 
+}
+.TableAndPicture{
+    box-sizing: border-box;
+    border: 3px solid var(--frame-color);
+    gap: 0.2px;
+     border-radius: 25px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+}
+
+.TimeLine .TableAndPicture i{
+    display: block;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+    
+}
+
+.table-and-image-row {
+  display: flex;          
+  align-items: center;
+       
+               
+}
+.TimeLine .TableAndPicture table {
+     width: 50%;   
+  border-collapse: collapse; 
+  width: 100%;
+  
+}
+
+.TimeLine .TableAndPicture th{
+   padding:8px;
+    border-top: 2px solid var(--frame-color);
+    border-bottom: 2px solid var(--frame-color);
+    border-left: none;
+    border-right: none;
+}
+ .table-and-image-row td{
+    padding: 8px;
+    border-top: 1px solid var(--frame-color);
+    border-bottom: 1px solid var(--frame-color);
+    border-left: none;
+    border-right: none;
+}
+.TableAndPicture table tbody tr:last-child td
+ {
+    padding: 8px;
+    border-top: 1px solid var(--frame-color);
+    border-bottom: 2px solid var(--frame-color);
+    border-left: none;
+    border-right: none;
+
+}
+.TableAndPicture img {
+     width: 50%;       
+  height: auto;        
+  max-width: 100%;
+}
+#Rules{
+      font-weight: bold;
+    font-size: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+#Rules::before{
+   font-weight: normal;
+  content: "\265a";  
+  margin-right: 8px; 
+  font-size: 1.5em;
+}
+.Rules ul{
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#Training{
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#Training::before{
+   font-weight: normal;
+  content: "\2656";  
+  margin-right: 8px; 
+  font-size: 1.5em;
+}
+.Training ul{
+     padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+li::marker {
+
+    font-size: 22px;  
+  }
+#ManVersusMachine{
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#ManVersusMachine::before{
+   font-weight: normal;
+  content: "\265d";  
+  margin-right: 8px; 
+  font-size: 1.5em;
+}
+.ManVersusMachine blockquote{
+    font-style: italic;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.ManVersusMachine i{
+    font-style: normal;
+}
+.End p {
+background-color: #000000;
+color: white;
+text-align: center;
+padding-top: 40px;
+padding-bottom: 40px;
+font-size: 15px;
+font-weight: lighter;
+}
+.End a{
+background-color: #000000;
+color: white;
+text-align: center;
+padding-top: 40px;
+padding-bottom: 40px;
+font-size: 15px;
+font-weight: lighter;
+}
+.iframe {
+    border: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+:root {
+--page-margin: var(--s-2);
+}
+  .mainContent {
+   padding-left: var(--page-margin);
+   padding-right: var(--page-margin);
+  }
+
+
+  .header {
+    height: 250px;
+    width: auto;
+    margin:0 auto;
+background-image: url('https://github.com/cgshep/csc8018-coursework-resources/blob/master/assets/chessboxing_background.jpg?raw=true');
+    background-size: contain;    
+    background-position: top center;  
+    background-repeat: no-repeat;
+   
+  }
+  
+  .header nav ul li:hover a {
+     background-color: rgba(255, 255, 255, 0.1);
+    color: yellow;   
+  }      
+  .header nav ul {
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 8px;
+    background-color: transparent;
+  }
+  .header nav ul li {
+    width: 1000%;               
+    text-align: right; 
+    margin:var(--s-2) 
+  }
+  .header nav ul li a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+    font-size: var(--s0);
+    font-weight: bold;
+    text-align: right;
+    transition: color 0.3s ease;
+  }
+.header .title {
+    position: absolute;
+    left: 10px;   
+    top: 30px;   
+    transform: none; 
+  }
+
+ .header .title h1 {
+    font-size: var(--s3);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+  }
+ .header nav {
+    right: 2px; 
+
+}
+.chessboxing_ring{
+    width: 90%;           
+    float:none;            
+    padding: 8px;
+    border: 2px solid rgba(128, 128, 128, 0.3); 
+    border-radius: 10px;   
+    font-style: normal;      
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-left: auto;
+margin-right: auto;
+  }
+  .youtubeVideo{
+       width: 90%;           
+    float: none;            
+    padding: 8px;
+    border: 2px solid rgba(128, 128, 128, 0.3); 
+    border-radius: 10px;   
+    font-style: normal;      
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-left: auto;
+margin-right: auto;
+  }
+  .youtubeVideo .iframe{
+    width: 100%;
+height: auto;
+  display: block;
+  margin: 0 auto; 
+  }
+  .table-and-image-row {
+    width: 70%;
+       display: flex;
+       flex-direction: column;   
+        margin: 0 auto; 
+        
+
+              
+}
+.TimeLine .TableAndPicture th{
+        text-align: center;
+   
+}
+.TimeLine .TableAndPicture tr{
+text-align:left;
+padding-left: 30px;
+padding-right: 30px;
+
+}
+.table-and-image-row td{
+    font-size: smaller;
+}
+.TableAndPicture img {
+    width: auto;
+}
+}
